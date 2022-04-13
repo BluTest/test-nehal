@@ -7,6 +7,8 @@ const app = require('./app');
 const PORT = process.env.PORT || 6673;
 const SERVER = http.createServer(app.callback());
 
+const PASSWORD = 'v2fASF36@12^#$'
+
 // Gracefully close Mongo connection
 const gracefulShutdown = () => {
   mongoose.connection.close(false, () => {
